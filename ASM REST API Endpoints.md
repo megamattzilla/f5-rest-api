@@ -84,3 +84,15 @@ POST https://{{big_ip_mgmt}}/mgmt/tm/asm/tasks/import-policy
 "file": "PD9<truncated>A8T4="
 }
 ```
+
+### Apply a previously imported ASM policy
+Using the MD5SUM ID collected before, we can apply the policy. 
+```
+POST https://{{big_ip_mgmt}}/mgmt/tm/asm/tasks/apply-policy
+
+{
+"policyReference": {"link":"https://localhost/mgmt/tm/asm/policies/7iA7aa_OqF3hql83ug4Gdw"}
+}
+```
+
+
